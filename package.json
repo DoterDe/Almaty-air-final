@@ -29,6 +29,7 @@
     "@radix-ui/react-toggle": "^1.1.2",
     "@radix-ui/react-toggle-group": "^1.1.2",
     "@radix-ui/react-tooltip": "^1.1.8",
+    "@vitejs/plugin-react": "^5.1.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "*",
     "cmdk": "^1.1.1",
@@ -51,15 +52,15 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
-    "@vitejs/plugin-react-swc": "^3.10.2",
     "autoprefixer": "^10.4.22",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.17",
     "vite": "6.3.5"
   },
   "scripts": {
-    "prebuild": "npm rebuild @swc/core --update-binary || true",
-    "build": "vite build"
+    "prebuild": "npm rebuild @swc/core --update-binary",
+    "build": "vite build",
+    "postinstall": "npm rebuild @swc/core --update-binary"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.53.3"
